@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse CV - Employers Apply to You</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.2/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- Animated Background -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Landing Page -->
+    <section id="landing" class="section active">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                I'm not looking for a job.
+                I'm looking for my kind of company.
+            </h1>
+            <p class="hero-subtitle">Think you have what it takes? Apply to hire me.</p>
+            <button id="start-btn" class="cta-button">
+                Start the Application
+                <span class="btn-subtitle">(For Employers Only)</span>
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">What I Bring to the Table</h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="JavaScript">
+                    <div class="skill-front">
+                        <span class="skill-icon">⚡</span>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="skill-back">
+                        <div class="skill-level">
+                            <div class="level-bar" data-level="95"></div>
+                        </div>
+                        <p>Expert Level</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="UI/UX Design">
+                    <div class="skill-front">
+                        <span class="skill-icon">🎨</span>
+                        <h3>UI/UX Design</h3>
+                    </div>
+                    <div class="skill-back">
+                        <div class="skill-level">
+                            <div class="level-bar" data-level="88"></div>
+                        </div>
+                        <p>Advanced Level</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="Problem Solving">
+                    <div class="skill-front">
+                        <span class="skill-icon">⚙️</span>
+                        <h3>Problem Solving</h3>
+                    </div>
+                    <div class="skill-back">
+                        <div class="skill-level">
+                            <div class="level-bar" data-level="92"></div>
+                        </div>
+                        <p>Expert Level</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="React & Frontend">
+                    <div class="skill-front">
+                        <span class="skill-icon">⚛️</span>
+                        <h3>React & Frontend</h3>
+                    </div>
+                    <div class="skill-back">
+                        <div class="skill-level">
+                            <div class="level-bar" data-level="90"></div>
+                        </div>
+                        <p>Expert Level</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="Team Leadership">
+                    <div class="skill-front">
+                        <span class="skill-icon">👥</span>
+                        <h3>Team Leadership</h3>
+                    </div>
+                    <div class="skill-back">
+                        <div class="skill-level">
+                            <div class="level-bar" data-level="85"></div>
+                        </div>
+                        <p>Advanced Level</p>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-skill="Creative Thinking">
+                    <div class="skill-front">
+                        <span class="skill-icon">💡</span>
+                        <h3>Creative Thinking</h3>
+                    </div>
+                    <div class="skill-back">
+                        <div class="skill-level">
+                            <div class="level-bar" data-level="96"></div>
+                        </div>
+                        <p>Genius Level</p>
+                    </div>
+                </div>
+            </div>
+            <button class="next-btn" onclick="showSection('quiz')">Next: Prove You're Worth It</button>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="section">
+        <div class="container">
+            <h2 class="section-title">Are You a Good Employer?</h2>
+            <p class="quiz-subtitle">Let's see if you pass my requirements...</p>
+            
+            <div class="quiz-container">
+                <div class="question-card active" data-question="0">
+                    <h3>Do you support remote work flexibility?</h3>
+                    <div class="options">
+                        <button class="option-btn" data-value="10">Absolutely! Work from anywhere</button>
+                        <button class="option-btn" data-value="5">Hybrid is fine</button>
+                        <button class="option-btn" data-value="0">Office only, sorry</button>
+                    </div>
+                </div>
+                
+                <div class="question-card" data-question="1">
+                    <h3>How do you handle work-life balance?</h3>
+                    <div class="options">
+                        <button class="option-btn" data-value="10">Life comes first, always</button>
+                        <button class="option-btn" data-value="7">We respect boundaries</button>
+                        <button class="option-btn" data-value="0">Work is life, right?</button>
+                    </div>
+                </div>
+                
+                <div class="question-card" data-question="2">
+                    <h3>What's your approach to professional development?</h3>
+                    <div class="options">
+                        <button class="option-btn" data-value="10">Sky's the limit + budget for courses</button>
+                        <button class="option-btn" data-value="5">Some learning opportunities</button>
+                        <button class="option-btn" data-value="0">Learn on your own time</button>
+                    </div>
+                </div>
+                
+                <div class="question-card" data-question="3">
+                    <h3>How often are coffee breaks allowed?</h3>
+                    <div class="options">
+                        <button class="option-btn" data-value="10">Unlimited coffee, unlimited breaks</button>
+                        <button class="option-btn" data-value="7">Reasonable breaks encouraged</button>
+                        <button class="option-btn" data-value="2">Breaks are for the weak</button>
+                    </div>
+                </div>
+                
+                <div class="question-card" data-question="4">
+                    <h3>What's your company culture like?</h3>
+                    <div class="options">
+                        <button class="option-btn" data-value="10">Fun, collaborative, and supportive</button>
+                        <button class="option-btn" data-value="5">Professional but friendly</button>
+                        <button class="option-btn" data-value="0">Competitive and high-pressure</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quiz-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span class="progress-text">Question 1 of 5</span>
+            </div>
+            
+            <div class="quiz-result" style="display: none;">
+                <h3>Your Compatibility Score:</h3>
+                <div class="score-container">
+                    <div class="score-circle">
+                        <div class="score-text">0%</div>
+                    </div>
+                </div>
+                <p class="score-message"></p>
+                <button class="next-btn" onclick="showSection('application')">Apply to Hire Me</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="application" class="section">
+        <div class="container">
+            <h2 class="section-title">Submit Your Application</h2>
+            <p class="application-subtitle">Convince me why I should work for you</p>
+            
+            <form id="employer-form" class="application-form">
+                <div class="form-group">
+                    <label for="company-name">Company Name *</label>
+                    <input type="text" id="company-name" name="companyName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="your-name">Your Name *</label>
+                    <input type="text" id="your-name" name="yourName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="your-role">Your Role/Title *</label>
+                    <input type="text" id="your-role" name="yourRole" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="why-hire">Why do you want to hire me? *</label>
+                    <textarea id="why-hire" name="whyHire" rows="4" required 
+                              placeholder="Tell me what makes you think we're a good match..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company-culture">Describe your company culture *</label>
+                    <textarea id="company-culture" name="companyCulture" rows="4" required 
+                              placeholder="What's it really like to work at your company?"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="salary-range">Salary Range Offered</label>
+                    <select id="salary-range" name="salaryRange">
+                        <option value="">Select range...</option>
+                        <option value="50k-70k">$50,000 - $70,000</option>
+                        <option value="70k-90k">$70,000 - $90,000</option>
+                        <option value="90k-120k">$90,000 - $120,000</option>
+                        <option value="120k+">$120,000+</option>
+                        <option value="negotiable">Negotiable</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="special-perks">What special perks do you offer?</label>
+                    <textarea id="special-perks" name="specialPerks" rows="3" 
+                              placeholder="Free snacks? Pet-friendly office? Yoga classes?"></textarea>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="remoteWork" value="yes">
+                        <span class="checkmark"></span>
+                        Remote work is definitely an option
+                    </label>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="coffeeBreaks" value="unlimited">
+                        <span class="checkmark"></span>
+                        Unlimited coffee breaks guaranteed
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    Submit Application
+                    <span class="btn-icon">🚀</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Submissions Viewer -->
+    <section id="submissions" class="section">
+        <div class="container">
+            <h2 class="section-title">Employer Applications</h2>
+            <div class="submissions-header">
+                <p>Companies that want to hire me:</p>
+                <button class="clear-btn" onclick="clearSubmissions()">Clear All</button>
+            </div>
+            <div id="submissions-list" class="submissions-list">
+                <!-- Submissions will be populated by JavaScript -->
+            </div>
+            <button class="back-btn" onclick="showSection('landing')">Back to Home</button>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <h3>Application Submitted! 🎉</h3>
+            <p>Thank you for applying to hire me. I'll review your application and get back to you if you seem like a good fit!</p>
+            <div class="modal-actions">
+                <button onclick="closeModal()" class="modal-btn">Close</button>
+                <button onclick="viewSubmissions()" class="modal-btn primary">View All Applications</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
